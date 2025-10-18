@@ -1,0 +1,69 @@
+Category,Question,Difficulty,Answer
+Basic,Write a Python program to swap two numbers without using a third variable.,Easy,"a, b = 5, 10
+a, b = b, a
+print(a, b)"
+Basic,Write a Python program to check if a number is even or odd.,Easy,"num = int(input('Enter a number: '))
+if num % 2 == 0:
+    print('Even')
+else:
+    print('Odd')"
+Basic,Write a program to find the largest among three numbers.,Easy,"a, b, c = 5, 8, 2
+largest = max(a, b, c)
+print('Largest number is:', largest)"
+Basic,Write a program to check if a given number is a palindrome.,Medium,"num = input('Enter number: ')
+if num == num[::-1]:
+    print('Palindrome')
+else:
+    print('Not palindrome')"
+Basic,Write a program to print the Fibonacci sequence up to n terms.,Medium,"n = int(input('Enter terms: '))
+a, b = 0, 1
+for i in range(n):
+    print(a)
+    a, b = b, a+b"
+Loops,Write a program to print all prime numbers between 1 to 100.,Medium,"for num in range(2, 101):
+    for i in range(2, int(num/2)+1):
+        if num % i == 0:
+            break
+    else:
+        print(num)"
+Loops,Write a Python program to reverse a string using a loop.,Easy,"s = input('Enter string: ')
+rev = ''
+for i in s:
+    rev = i + rev
+print(rev)"
+List,Write a program to find the largest and smallest element in a list.,Easy,"lst = [5, 1, 9, 3]
+print('Max:', max(lst))
+print('Min:', min(lst))"
+List,Write a program to remove duplicates from a list.,Medium,"lst = [1,2,2,3,4,4,5]
+unique = list(set(lst))
+print(unique)"
+List,Write a Python program to find the second largest number in a list.,Medium,"lst = [10, 20, 4, 45, 99]
+lst.sort()
+print('Second largest:', lst[-2])"
+Dictionary,Write a program to count word occurrences in a sentence using a dictionary.,Medium,"sentence = 'this is a test this is python'
+words = sentence.split()
+counts = {}
+for w in words:
+    counts[w] = counts.get(w, 0) + 1
+print(counts)"
+Dictionary,Write a Python script to merge two dictionaries.,Easy,"d1 = {'a':1, 'b':2}
+d2 = {'c':3, 'd':4}
+d1.update(d2)
+print(d1)"
+Functions,Create a function to calculate the area of a circle.,Easy,"import math
+def area_circle(r):
+    return math.pi * r * r
+print(area_circle(5))"
+Functions,Write a recursive function to calculate factorial.,Medium,"def fact(n):
+    return 1 if n==0 else n*fact(n-1)
+print(fact(5))"
+Data Analysis,Read a CSV file using pandas and display the first 5 rows.,Easy,"import pandas as pd
+df = pd.read_csv('data.csv')
+print(df.head())"
+Data Analysis,Check for missing values in a dataset and fill them with the mean.,Medium,"df['column_name'].fillna(df['column_name'].mean(), inplace=True)"
+File Handling,Write a program to read a text file and count the number of words.,Medium,"with open('file.txt', 'r') as f:
+    words = f.read().split()
+print('Total words:', len(words))"
+File Handling,Write a Python program to write user input into a file.,Easy,"data = input('Enter text: ')
+with open('output.txt', 'w') as f:
+    f.write(data)"
